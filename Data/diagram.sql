@@ -46,7 +46,7 @@ ENGINE = InnoDB;
 -- Table `tbb`.`Actors`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `tbb`.`Actors` (
-  `id_Actors` INT NOT NULL,
+  `id_Actors` INT NOT NULL AUTO_INCREMENT,
   `Name` VARCHAR(45) NULL,
   PRIMARY KEY (`id_Actors`))
 ENGINE = InnoDB;
@@ -56,10 +56,10 @@ ENGINE = InnoDB;
 -- Table `tbb`.`Dialogue`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `tbb`.`Dialogue` (
-  `id_Dialogue` INT NOT NULL,
+  `id_Dialogue` INT NOT NULL AUTO_INCREMENT,
   `Episode_id_episode` INT NOT NULL,
   `Actors_id_Actors` INT NOT NULL,
-  `Dialogue` VARCHAR(500) NULL,
+  `Dialogue` VARCHAR(1000) NULL,
   PRIMARY KEY (`id_Dialogue`),
   INDEX `fk_Dialogue_Episode_idx` (`Episode_id_episode` ASC) VISIBLE,
   INDEX `fk_Dialogue_Actors1_idx` (`Actors_id_Actors` ASC) VISIBLE,
